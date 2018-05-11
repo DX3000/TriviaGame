@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+    <!-- Added link to the jQuery Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Added a link to Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="triviacss.css">
+</head>
+
+<body>
+    <!-- 
+        Plan-
+        start page with start button
+        on start button display 
+            question 
+            timer 
+            answers
+        functions =
+            capture answers and determin if correct 
+        count score
+        time-out (and display correct)
+        each question has a new background pic 
+    -->
+
+
+
+    <style>
+    </style>
+    <div class="container">
+
+
+        <div class="flx-embed">
+            <div style="position:relative; height:0; padding-bottom:56.25%; width:100%">
+                <iframe style="position:absolute; top:0; left:0; width:100%; height:100%; z-index: -1;" src="https://media.flixel.com/cinemagraph/qebkh12wmojz8d35mdw5?hd=false"
+                    frameborder="0" allowfullscreen allow='autoplay'></iframe>
+                    <div class="row">
+                            <div class="col-sm-8">
+                                <div id="quest">
+                                    <br>
+                                    <br>
+                                </div>
+                                <div id="buttons">
+                                    <button id="answrA" class="btn btn-primary btn-lg">A</button>
+                                    </button>
+                                    <span id="choiceA"></span>
+                                    <br>
+                                    <br>
+                                    <button id="answrB" class="btn btn-primary btn-lg">B</button>
+                                    </button>
+                                    <span id="choiceB"></span>
+                                    <br>
+                                    <br>
+                                    <button id="answrC" class="btn btn-primary btn-lg">C</button>
+                                    </button>
+                                    <span id="choiceC"></span>
+                                    <br>
+                                    <br>
+                                    <button id="answrD" class="btn btn-primary btn-lg">D</button>
+                                    </button>
+                                    <span id="choiceD"></span>
+                                </div>
+                            </div>
+                        </div>
+            </div>
+
+           
+        </div>
+
+
+
+
+
+
+    </div>
+
+
+    <!-- JAVA -->
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+
+
+
+            var questions = [
+                {
+                    quest: "How old is the universe in light years?",
+                    answer: "13.8 billion light years",
+                    choiceA: "13.8 billion light years",
+                    choiceB: "8 billion light years",
+                    choiceC: "10 billion light years",
+                    choiceD: "19.9 billion light years",
+                    displayAnswer: "xxxxxx"
+                },
+                {
+                    quest: "Question 2",
+                    answer: "Option B",
+                    choiceA: "Option A",
+                    choiceB: "Option B",
+                    choiceC: "10 billion light years",
+                    choiceD: "19.9 billion light years",
+                    displayAnswer: "xxxxx"
+                },
+                {
+                    quest: "How is your mom in years?",
+                    answer: "13.8 billion light years",
+                    choiceA: "13.8 billion light years",
+                    choiceB: "8 billion light years",
+                    choiceC: "10 billion light years",
+                    choiceD: "19.9 billion light years",
+                    displayAnswer: "xxxxx"
+                },
+                {
+                    quest: "Question 3",
+                    answer: "answrA",
+                    choiceA: "Option A",
+                    choiceB: "Option B",
+                    choiceC: "10 billion light years",
+                    choiceD: "19.9 billion light years",
+                    displayAnswer: "loser face"
+                }
+            ];
+
+            var random1 = Math.floor(Math.random() * 3);
+            var question = questions[random1];
+
+
+            function printQuestion() {
+                $("#quest").text(question.quest);
+                $("#choiceA").text(question.choiceA);
+                $("#choiceB").text(question.choiceB);
+                $("#choiceC").text(question.choiceC);
+                $("#choiceD").text(question.choiceD);
+            }
+
+
+
+            $("#buttons").on("click", "button", function () {
+                var a = $(this).attr("id");
+                if (a === question.answer) {
+                    alert("correct")
+                } else {
+                    alert(question.displayAnswer)
+
+                }
+
+            })
+
+
+
+
+            printQuestion();
+
+        });
+
+    </script>
+
+
+
+
+
+
+
+</body>
+
+</html>
