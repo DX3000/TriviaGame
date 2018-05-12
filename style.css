@@ -1,0 +1,42 @@
+
+#quest{
+    font-family: "Times New Roman", Times, serif;
+    color: tomato;
+    font-size: 40px;
+}
+#sec{
+    font-family: "Times New Roman", Times, serif;
+    color: tomato;
+    font-size: 20px;
+}
+#time{
+    font-family: "Times New Roman", Times, serif;
+    color: tomato;
+    font-size: 15px;
+}
+#choiceA{
+    font-family: "Times New Roman", Times, serif;
+    color: tomato;
+    font-size: 20px;
+} 
+#choiceB{
+    font-family: "Times New Roman", Times, serif;
+    color: tomato;
+    font-size: 20px;
+} 
+#choiceC{
+    font-family: "Times New Roman", Times, serif;
+    color: tomato;
+    font-size: 20px;
+} 
+#choiceD{
+    font-family: "Times New Roman", Times, serif;
+    color: tomato;
+    font-size: 20px;
+}
+
+       
+}
+.flx-embed{
+    z-index: -1;
+}
